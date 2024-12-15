@@ -15,9 +15,9 @@ bool isAnagram(string s1 ,string s2){
         }
      }
      for(int i=0;i<26;i++){
-        if(alphaArr[i]!=0){return false;}else return true;
+        if(alphaArr[i]!=0){return false;}
      }
-     return false;
+     return true;
 
 }
 int main(){
