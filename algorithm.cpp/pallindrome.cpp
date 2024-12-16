@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
+//https : // leetcode.com/problems/valid-palindrome/
+
 bool isPalindrome(string s)
 {
 
