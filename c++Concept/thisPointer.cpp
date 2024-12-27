@@ -1,0 +1,1 @@
+//this  is a pointer pointing to interface of object of that class it is passed to a function
