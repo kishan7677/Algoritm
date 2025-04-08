@@ -1,0 +1,37 @@
+class Foo {
+public:
+    Foo():mtrun(1) {
+        
+    }
+
+    void first(function<void()> printFirst) {
+        
+        // printFirst() outputs "first". Do not change or remove this line.
+        
+        printFirst();
+        mtrun = 2;//it can be written as std:: mtrun(2,memory_order_relase)
+    }
+
+    void second(function<void()> printSecond) {
+        spinlock(2);
+        // printSecond() outputs "second". Do not change or remove this line.
+        printSecond();
+        mtrun =3;
+    }
+
+    void third(function<void()> printThird) {
+        spinlock(3);
+        
+        // printThird() outputs "third". Do not change or remove this line.
+        printThird();
+    }
+   void spinlock(int trun){
+    while(mtrun.load()!=trun)//mtrun.load(std::memory_order_accquire != trun or mtrun!=turn) {
+
+    }
+    }
+    atomic<int >mtrun;
+};
+
+function<void()> printFirst // this is a lamda function passed in another fun will mention 
+                            // about it in C++ concept
